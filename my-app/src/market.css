@@ -14,17 +14,62 @@ h1{
     text-align : center;
 }
 
-/*Making big square that all the drinks are on*/
-.square{ 
-    background-color :#5E7CA6;
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+
+/*Square that all drinks are placed on top of*/
+.square {
+    position: absolute;
+    z-index: -1;
+    background-color :rgba(94, 124, 166, 0.5);;
     width: 1200px;                       
     height: 800px;
     border-radius: 10%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center; 
 }
 
-/*button used prices of drinks */
-.price-button{
-    
 
+
+/*Each drink section */
+.product{ 
+    text-align: center;
+    padding: 10px;    
+    margin: 10px;
 }
 
+.product img { 
+ width: 25%;  
+ height :auto;   
+}
+
+.caption { 
+    font-size : 12 px; 
+    font-family : 'Pixel', sans-serif;
+    color: white; 
+}
+
+
+.price { 
+    font-size : 12 px; 
+    font-family :'Pixel', sans-serif;
+    color: white; 
+}
+
+.buy-button { 
+    background-color :#5E7CA6;
+    font-size : 12 px;
+    font-family : 'Pixel', sans-serif; 
+    color: white; 
+    height: 50px; 
+    width: 100px;
+    border-radius: 10%;
+}
