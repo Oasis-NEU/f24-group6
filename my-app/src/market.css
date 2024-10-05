@@ -1,0 +1,30 @@
+/*Pixel font to be used throughout */
+@font-face {
+    font-family: 'Pixel';
+    src: url('pixel.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Heading */
+h1{ 
+    color :#5E7CA6;
+    font-family :'Pixel' , sans-serif;
+    font-size : 75px;
+    text-align : center;
+}
+
+/*Making big square that all the drinks are on*/
+.square{ 
+    background-color :#5E7CA6;
+    width: 1200px;                       
+    height: 800px;
+    border-radius: 10%;
+}
+
+/*button used prices of drinks */
+.price-button{
+    
+
+}
+
