@@ -4,3 +4,4 @@ Welcome to Feline Focus, where your love for cats and cafes meets productivity! 
 
 Streamline productivity while having fun as you tend to your cafe and your beloved kitty. Can you keep up with the chaos and charm of your cafe cat? Dive into Feline Focus and find out! 🐾
 
+kjhfkhjgbov
