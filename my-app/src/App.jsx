@@ -11,10 +11,11 @@ function App() {
   // if many - then use parenthesis
   return (
     <div>
-      <Welcome />
+    <p>hello</p>
       <TodoList />
       </div>
     // another function
+    // button leads to shopping
   );
 }
 
