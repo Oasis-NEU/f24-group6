@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/*import { useState } from 'react';
 
 // todo list 
 // bullet point closer 
@@ -48,8 +48,8 @@ export default function TodoList() {
 
     return (
         <div>
-            <h2>my to-do list</h2>
-            {/* input field to add new tasks */}
+            <h2>my to-do list</h2>*/
+            {/* input field to add new tasks }
             <input
                 type="text"
                 value={newTask}
@@ -57,7 +57,7 @@ export default function TodoList() {
                 placeholder="enter a task!"
             />
             {/*drop down to choose difficulty of task */}
-            <select 
+            /*<select 
                 value = {setNewTaskLvl}
                 onChange={(e) => setNewTaskLvl(e.target.value)}
                 >
@@ -70,7 +70,7 @@ export default function TodoList() {
             <button onClick={addTask}>add task</button>
 
             {/* render the list of tasks */}
-            <ul>
+           /* <ul>
                 {tasks.map((task, index) => (
                     <li key={index} style={{ textDecoration: task.completed ? 'line-through' : 'none'}}>
                         {task.text}
@@ -92,4 +92,4 @@ export default function TodoList() {
             </ul>
         </div>
     );
-}
+}*/

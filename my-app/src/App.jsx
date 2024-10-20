@@ -1,19 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './styles/App.css'
 //importing function from components
-import Welcome from './components/welcome'
-import TodoList from './components/todolist'
+import TodoList from './components/productivity/todolist.jsx'
 
 function App() {
-
   // if many - then use parenthesis
   return (
-    <div>
-    <p>hello</p>
-      <TodoList />
-      </div>
+    <div className="app">
+        {/* Other components */}
+        <div className="rightTab">
+            <TodoList />
+        </div>
+    </div>
     // another function
     // button leads to shopping
   );
