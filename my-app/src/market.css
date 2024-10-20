@@ -28,7 +28,7 @@ h1{
     position: absolute;
     z-index: -1;
     background-color :rgba(94, 124, 166, 0.5);;
-    width: 1200px;                       
+    width: 1000px;                       
     height: 800px;
     border-radius: 10%;
     display: flex; 
@@ -38,7 +38,18 @@ h1{
 }
 
 
+.back-button { 
+    background-color :#5E7CA6;
+    font-size : 12 px;
+    font-family : 'Pixel', sans-serif; 
+    color: white; 
+    height: 25px; 
+    width: 120px;
+}
 
+.budget { 
+
+}
 /*Each drink section */
 .product{ 
     text-align: center;
