@@ -3,15 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe Page</title>
-
+    <title>home(cafe) page</title>
 
     <link rel="stylesheet" href="home.css"> 
+
+
+    <style>
+        body {
+            background-image: url('cafe.png'); /* Keep the background image in the HTML file */
+            background-size: cover; /* Makes the image cover the entire background */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            height: 100vh; /* Sets the height of the body to full viewport height */
+            margin: 0; /* Removes default margin */
+            position: relative; /* Ensure the body is the reference for absolute positioning */
+        }
+
+        .cat-image {
+            position: absolute;
+            top: 50px; /* Position from the top */
+            left: 50px; /* Position from the left */
+        }
+    </style>
 </head>
 <body>
+   
+    <a href="market.html">
+        <button class="back-button">To the market</button>
+    </a>
 
-  
+    <div class="container">
+        <img src="cat.jpeg" alt="cat" class="cat-image">
+        <img src="caption.png" alt="text">
+    </div>
     
-
 </body>
 </html>
