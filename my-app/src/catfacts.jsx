@@ -1,25 +1,26 @@
-const catFactUrl = 'https://cat-fact.herokuapp.com';
-// Replace 'cat fact board' with what the id for it is in html.
-const outputElement = document.getElementById('cat fact board');
-    
+const catFactUrl = 'https://catfact.ninja/fact';
+import {useState, useEffect} from 'react';    
+
+
 /**
- * Places data fetched from the Cat-Fact API onto the 'Cat Fact Board'.
+ * Fetches data from the Cat-Fact API and displays it on the screen.
  * Returns an error message if something goes wrong.
+ * Note: Because of React.StrictMode, this function is called twice.
+ * This behavior should stop in production mode. 
  */
-function getCatFact() {
+export default function CatFact() {
+     const [fact, setFact] = useState([])
+     useEffect (() => {
       fetch(catFactUrl)
-        // .then handles asynchronous response from the server.
-        // response.json() parses through the JSON data fetched. 
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Something went wrong with the network response.")
-            }
-            return response.json();
-        } )
-        // Places returned data onto the "Cat Fact Board".
-        .then(data =>  {
-            outputElement.textConent = JSON.stringify(data, null, 2);
-        })
-        .catch(error => console.error('Error:', error));
-    };
-  
+        .then(response => response.json())
+        .then(data => setFact(data.fact))
+        .catch(error => console.log("Error:", error));
+    }, []);
+
+    return (
+        <div>
+            <p>{fact}</p>
+        </div>
+    );
+
+}
