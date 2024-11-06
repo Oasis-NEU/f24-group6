@@ -1,6 +1,17 @@
-const catFactUrl = 'https://catfact.ninja/fact';
+const catFactUrl = 'https://catfact.ninja/fact?max_length=100';
 import {useState, useEffect} from 'react';    
 
+const boardStyle = {
+    width: "200px",
+    height: "200px",
+    border: "1px solid black",
+    padding: "10px",
+    margin: "10px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "${fontSize}px"
+}
 
 /**
  * Fetches data from the Cat-Fact API and displays it on the screen.
@@ -18,8 +29,8 @@ export default function CatFact() {
     }, []);
 
     return (
-        <div>
-            <p>{fact}</p>
+        <div id ='factText' style={boardStyle}>
+            {fact}
         </div>
     );
 
