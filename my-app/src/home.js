@@ -1,49 +1,47 @@
+// Home.js
+const Home = () => {
+    const [showCaption, setShowCaption] = React.useState(false);
 
-let elapsedTime = 0; 
-let intervalID = null;
-let sastifaction = true;
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setShowCaption((prev) => !prev);
+        }, 10000); // Toggle every 10 seconds
 
+        return () => clearInterval(interval);
+    }, []);
 
-//catch craving and scratch every second
+    return React.createElement(
+        'div',
+        { className: 'app' },
+        React.createElement(
+            'a',
+            { href: 'market.html' },
+            React.createElement('button', { className: 'back-button' }, 'To the market')
+        ),
+        React.createElement(
+            'div',
+            { className: 'container' },
+            React.createElement('img', {
+                src: 'kitty.png',
+                alt: 'cat',
+                className: 'cat-image',
+            }),
+            React.createElement(
+                'div',
+                { className: 'caption-container' },
+                React.createElement('img', {
+                    src: 'caption.png',
+                    alt: 'text',
+                    className: 'caption-image',
+                }),
+                showCaption
+                    ? React.createElement('p', { className: 'caption-text' }, 'I want a drink')
+                    : null
+            )
+        )
+    );
+};
 
-// Function to start the stopwatch
-function startStopwatch() {
-    elapsedTime = 0; 
-    intervalID = setInterval(() => {
-        elapsedTime++; 
-    }, 1000); 
-}
-
-// Function to stop the stopwatch
-function stopStopwatch() {
-    clearInterval(intervalID); 
-    elapsedTime = 0; 
-}
-
-//Craving trigger
-function Craving() {
-if (sastifaction = false) { 
-    startStopwatch(); 
-    //craving message 
-    document.getElementById("textOverlay").style.display = "block";
-    //if () {
-    stopStopwatch(); 
-    //thank you message 
-    document.getElementById("textOverlay").style.display = "block";
-    //disappear in 5 minutes
-    //else 
-    scrath()
-  
-    }
-}
-
-/*
-//scratch trigger 
-function scracth() { 
-    if (elapsedTime.equals(15)){
-        document.getElementById(scratch)
-        if //action button is pressed and is vaild)
-        //remove scratch
-    }
-}
-*/
+// Render the component to the DOM
+const rootElement = document.getElementById('root');
+ReactDOM.render(React.createElement(Home), rootElement);

@@ -26,8 +26,19 @@ h1{
 
 .cat-image{ 
     position: relative; 
-    top: 1000px;
-    right: 600;
+    width:150px; 
+    height:150x;
+    top: 260px;
+    right: 900px;
+}
+
+
+.caption-text {
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family :'Pixel' , sans-serif;
+    text-align: center;
 }
 
 .back-button { 
