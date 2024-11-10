@@ -1,20 +1,46 @@
 /* Header css*/
 
+.tab {
+  position: fixed; /* Fixed position to stay on the right side */
+  top: 20px; 
+  right: 0; /* Align to the right */
+  width: 300px; /* Width of the tab */
+  background-color: #262626; /* Background color for the tab */
+  padding: 20px; /* Space inside the tab */
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 10;
+  height: calc(100vh - 40px); /* Full height minus the top space */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between the header and task list */
+  transition: transform 0.3s ease; /* Smooth transition for sliding */
+}
+
+/*header css */
 .header {
     background: #0D0D0D;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
-    position: relative;
+    height: 100px;
+    position: relative; 
+    border-radius: 8px;
+    padding: 10px; 
+    color: white;
   }
   
+  .header h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  /*new task */
   .newTask {
     position: absolute;
-    height: 54px;
     bottom: -27px;
     width: 100%;
-    max-width: 736px;
     display: flex;
     gap: 8px;
     padding: 0 1rem;
@@ -50,7 +76,8 @@
   }
 
 
-/* Task css */ 
+
+/* Task  */ 
 .task {
     width: 100%;
     background: #262626;
@@ -103,13 +130,11 @@
 
 
 
-/* Tasks css */
+/* Tasks */
 .tasks {
-    width: 100%;
-    max-width: 736px;
-    margin: 0 auto;
-    margin-top: 90px;
-    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
   
   .header {
@@ -132,7 +157,7 @@
   }
   
   .textPurple {
-    color: #8284FA !important;
+    color: #8284FA ;
   }
   
   .header span {

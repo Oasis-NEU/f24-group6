@@ -1,7 +1,7 @@
 import styles from '../todolist.module.css'
 import { useState } from 'react';
 
-export default function Header({handleAddTask}) {
+export default function Header({ handleAddTask }) {
     const [title, setTitle] = useState('');
 
     function handleSubmit(event) {
@@ -19,17 +19,19 @@ export default function Header({handleAddTask}) {
 
 
     return (
-        <header className={styles.header}>
-            <h1>to-do list</h1>
+        <div className={styles.tab}>
+            <header className={styles.header}>
+                <h1>to-do list</h1>
 
-            <form onSubmit={handleSubmit} className={styles.newTask}>
-                <input 
-                placeholder="add a new task" 
-                type="text" 
-                onChange={onChangeTitle} 
-                value={title}/> 
-                <button>create</button>
-            </form>
-        </header>
+                <form onSubmit={handleSubmit} className={styles.newTask}>
+                    <input
+                        placeholder="add a new task"
+                        type="text"
+                        onChange={onChangeTitle}
+                        value={title} />
+                    <button>create</button>
+                </form>
+            </header>
+        </div>
     );
 }

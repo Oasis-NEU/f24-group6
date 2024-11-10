@@ -11,11 +11,12 @@ export default function Tasks({ tasks, onDelete, onComplete }) {
         onComplete(taskId);
 
         // Add $5 to the bank accumulator when a task is completed
+        // fetch prev --> +5 --> save as new        .
         setBank(prevBank => prevBank + 5);
     }
 
         return (
-            <div className={styles.header}>
+            <div className={styles.tab}>
                 <section className={styles.tasks}>
                     <header className={styles.header}>
                         <div>

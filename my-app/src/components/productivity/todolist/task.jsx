@@ -10,7 +10,7 @@ export default function Task({ task, onDelete, onComplete }) {
         };
 
     return (
-        <div className={styles.header}>
+        <div className={styles.tab}>
             <section className={styles.tasks}>
                 <button className={styles.checkContainer} onClick={handleComplete}>
                     {task.isCompleted ? <BsFillCheckCircleFill /> : <div />}
