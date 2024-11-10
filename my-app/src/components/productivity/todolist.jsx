@@ -51,15 +51,15 @@ function TodoList() {
     }
   
     return (
-      <>
+      <div className={styles.tab}>
         <Header handleAddTask={addTask} />
         <Tasks
           tasks={tasks}
           onDelete={deleteTaskById}
           onComplete={toggleTaskCompletedById}
         />
-      </>
+      </div>
     )
   }
   
-  export default TodoList
+  export default TodoList;
