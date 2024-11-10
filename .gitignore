@@ -1,7 +1,5 @@
 
 .vscode/launch.json
-package-lock.json
-src/App.jsx
 src/components/welcome.jsx
 package-lock.json
 cypress/
