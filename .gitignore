@@ -5,3 +5,4 @@ package-lock.json
 cypress/
 supabase/
 cypress.config.js
+cypress/
