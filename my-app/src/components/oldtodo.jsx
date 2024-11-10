@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function TodoList() {
+/* export default function TodoList() {
     // tasks --> [] --> state variable that stores the list of tasks
     // setTasks - allows me to update the tasks state
     const [tasks, setTasks] = useState([]);
@@ -35,17 +35,17 @@ export default function TodoList() {
     return (
         <div>
             <h2>my to-do list</h2>
-            {/* input field to add new tasks */}
+            {/* input field to add new tasks }
             <input
                 type="text"
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
                 placeholder="enter a task!"
             />
-            {/* button to trigger adding the new task */}
+            {/* button to trigger adding the new task }
             <button onClick={addTask}>add task</button>
 
-            {/*displaying the list of tasks */}
+            {/*displaying the list of tasks }
             <ul>
                 {tasks.map((task, index) => (
                     <li key={index} style={{ textDecoration: task.completed ? 'line=through' : 'none'}}>
@@ -58,4 +58,4 @@ export default function TodoList() {
             </ul>
         </div>
     );
-}
+} */

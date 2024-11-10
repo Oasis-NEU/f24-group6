@@ -1,20 +1,29 @@
-import styles from './task.module.css';
+import styles from '../todolist.module.css';
+import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { TbTrash } from 'react-icons/tb';
 
-export function Task() {
+
+export default function Task({ task, onDelete, onComplete }) {
+
+    const handleComplete = () => {
+            onComplete(task.id); // Marks the task as completed
+        };
+
     return (
-
-        <header className={styles.header}>
+        <div className={styles.header}>
             <section className={styles.tasks}>
-                <div>
-                    <p>Create tasks</p>
-                    <span>10</span>
-                </div>
-                <div>
-                    <p>Completed tasks:</p>
-                    <span>1 of 10</span>
-                </div>
-            </section>
-        </header>
+                <button className={styles.checkContainer} onClick={handleComplete}>
+                    {task.isCompleted ? <BsFillCheckCircleFill /> : <div />}
+                </button>
 
+                <p className={task.isCompleted ? styles.textCompleted : ""}>
+                    {task.title}
+                </p>
+
+                <button className={styles.deleteButton} onClick={() => onDelete(task.id)}>
+                    <TbTrash size={20} />
+                </button>
+            </section>
+        </div>
     )
 }
