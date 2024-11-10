@@ -1,4 +1,5 @@
 
+node_modules
 .vscode/launch.json
 src/components/welcome.jsx
 package-lock.json
