@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home(cafe) page</title>
-
-    <link rel="stylesheet" href="home.css"> 
-
-
+    <title>Home (Cafe) Page</title>
+    <link rel="stylesheet" href="home.css">
     <style>
         body {
             background-image: url('cafe.png'); /* Keep the background image in the HTML file */
@@ -18,24 +15,61 @@
             margin: 0; /* Removes default margin */
             position: relative; /* Ensure the body is the reference for absolute positioning */
         }
-
+        .container {
+            position: relative; /* Make the container the reference for absolute positioning of child elements */
+        }
+        .caption-image {
+            position: absolute; /* Position the caption image absolutely */
+            top: 50px;
+            right: 600px;
+            width: 300px;
+            height: 300px;
+            transform: scaleX(-1); /* Flips the caption horizontally */
+        }
         .cat-image {
             position: absolute;
-            top: 50px; /* Position from the top */
-            left: 50px; /* Position from the left */
+        }
+        .caption-text {
+            position: absolute; /* Position text absolutely within the container */
+            top: 150px; /* Align text to the same top as the caption image */
+            right: 640px; /* Align text to the same right position as the caption image */
+            font-size: 24px;
+            font-weight: bold;
+            color: black; /* Adjust the text color as needed */
         }
     </style>
 </head>
 <body>
-   
+
     <a href="market.html">
         <button class="back-button">To the market</button>
     </a>
 
     <div class="container">
-        <img src="cat.jpeg" alt="cat" class="cat-image">
-        <img src="caption.png" alt="text">
+        <img src="kitty.png" alt="cat" class="cat-image">
+        <img src="caption.png" alt="text" class="caption-image">
+        <p id="captionText" class="caption-text"></p> <!-- Placeholder for dynamic caption text -->
     </div>
+
+    <script>
+        // Function to toggle the caption text every 10 seconds
+        function toggleCaption() {
+            const captionTextElement = document.getElementById('captionText');
+            let isTextShown = false;
+
+            setInterval(() => {
+                isTextShown = !isTextShown;
+                if (isTextShown) {
+                    captionTextElement.textContent = "I want a drink";
+                } else {
+                    captionTextElement.textContent = "";
+                }
+            }, 10000); // Toggle every 10 seconds
+        }
+
+        // Call the toggleCaption function on page load
+        window.onload = toggleCaption;
+    </script>
     
 </body>
 </html>
