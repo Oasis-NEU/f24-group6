@@ -1,0 +1,51 @@
+/*Pixel font to be used throughout */
+@font-face {
+    font-family: 'Pixel';
+    src: url('pixel.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Heading */
+h1{ 
+    color :#5E7CA6;
+    font-family :'Pixel' , sans-serif;
+    font-size : 75px;
+    text-align : center;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+
+
+.cat-image{ 
+    position: relative; 
+    width:150px; 
+    height:150x;
+    top: 260px;
+    right: 900px;
+}
+
+
+.caption-text {
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family :'Pixel' , sans-serif;
+    text-align: center;
+}
+
+.back-button { 
+    background-color :#5E7CA6;
+    font-size : 12 px;
+    font-family : 'Pixel', sans-serif; 
+    color: white; 
+    height: 25px; 
+    width: 120px;
+}
