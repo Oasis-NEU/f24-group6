@@ -4,3 +4,6 @@ my-app/package-lock.json
 my-app/src/App.jsx
 my-app/src/components/welcome.jsx
 package-lock.json
+cypress/
+supabase/
+my-app/cypress.config.js
