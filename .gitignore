@@ -1,0 +1,7 @@
+
+.vscode/launch.json
+src/components/welcome.jsx
+package-lock.json
+cypress/
+supabase/
+cypress.config.js
