@@ -19,7 +19,6 @@ export default function Header({ handleAddTask }) {
 
 
     return (
-        <div className={styles.tab}>
             <header className={styles.header}>
                 <h1>to-do list</h1>
 
@@ -32,6 +31,5 @@ export default function Header({ handleAddTask }) {
                     <button>create</button>
                 </form>
             </header>
-        </div>
     );
 }

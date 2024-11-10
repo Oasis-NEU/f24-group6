@@ -15,28 +15,24 @@ export default function Tasks({ tasks, onDelete, onComplete }) {
         setBank(prevBank => prevBank + 5);
     }
 
-        return (
-            <div className={styles.tab}>
-                <section className={styles.tasks}>
-                    <header className={styles.header}>
-                        <div>
-                            <p>bank</p>
-                            <span>${bank}</span> {/* Display the bank amount */}
-                        </div>
-                    </header>
-
-                    <div className={styles.list}>
-                        {tasks.map((task) => (
-                            <Task
-                                key={task.id}
-                                task={task}
-                                onDelete={onDelete}
-                                onComplete={handleTaskComplete}
-                            />
-                        ))}
-                    </div>
-                </section>
+    return (
+        <section className={styles.tasks}>
+            <div>
+                <p>bank</p>
+                <span>${bank}</span> {/* Display the bank amount */}
             </div>
-        );
-    }
-    // 
+
+
+            <div className={styles.list}>
+                {tasks.map((task) => (
+                    <Task
+                        key={task.id}
+                        task={task}
+                        onDelete={onDelete}
+                        onComplete={handleTaskComplete}
+                    />
+                ))}
+            </div>
+        </section>
+    );
+}

@@ -6,8 +6,8 @@ import TodoList from './components/productivity/todolist'
 function App() {
   return (
     <div>
-      <TodoList/>
-      </div>
+      <TodoList />
+    </div>
     // another function
   );
 }
