@@ -1,5 +1,4 @@
 import styles from '../todolist.module.css'
-import styles from '../todolist.module.css'
 
 export function Header() {
     return (
