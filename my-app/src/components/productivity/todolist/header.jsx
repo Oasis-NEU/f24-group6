@@ -1,13 +1,15 @@
-import styles from './todolist.module.css'
+import styles from '../todolist.module.css'
 
-export default function TodoListHeader() {
+export function Header() {
     return (
-        <header className={styles.header}>
-            <h1>to-do list</h1>
-            <form className={styles.newTaskForm}>
-                <input placeholder="add a new task" type="text" />
-                <button>Create</button>
-            </form>
-        </header>
+        <div className={styles.right}>
+            <header className={styles.header}>
+                <h1>to-do list</h1>
+                <form className={styles.newTask}>
+                    <input placeholder="add a new task" type="text" />
+                    <button>Create</button>
+                </form>
+            </header>
+        </div>
     )
 }

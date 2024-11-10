@@ -1,9 +1,10 @@
-import styles from './task.module.css';
+import styles from '../todolist.module.css';
 
-export function Task() {
+export function Tasks() {
     return (
-        <section className={styles.tasks}>
-            <header className={styles.header}>
+        <div className={styles.right}>
+        <section className={styles.tasksheader}>
+            <header className={styles.tasks}>
                 <div>
                     <p>Create tasks</p>
                     <span>10</span>
@@ -14,5 +15,6 @@ export function Task() {
                 </div>
             </header>
         </section>
+        </div>
     )
 }

@@ -1,51 +1,72 @@
+/* overall body */
 body {
-  height: 100%;
+  height: 100vh;
   /* Ensure the body takes the full height of the viewport */
   margin: 0;
   /* Remove default margin */
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f5f5f5;
+  width: 100vw;
+  position: fixed;
+}
+
+/* right side tab */
+.right {
+  background: rgb(238, 238, 214);
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 310px;
+  position: fixed;
+  /* padding for inner spacing */
+  padding: 20px;
+  /* allows scrolling if content overflows */
+  overflow-y: auto;
+  box-sizing: border-box;
+  flex-direction: column;
 }
 
 .header {
-  background: rgb(238, 238, 214);
-  flex-direction: column;
-  /*display: flex;*/
-  /* Stack items vertically */
-  height: 100vh;
-  width: 310px;
-  /* Set a width for the header */
-  position: fixed;
-  /* Use fixed positioning */
-  top: 0;
-  /* Position at the top */
-  right: 0;
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  position: relative;
 }
 
+/* header title styling */
 .header h1 {
-  padding: 70px;
+  /*padding: 10px;*/
   color: rgb(106, 67, 28);
-  /*margin: 0 0 20px;*/
-  /*top: 100px;*/
   text-align: center;
   font-size: 1.2em;
   font-weight: 700px;
+  /* adds space below title */
+  margin-bottom: 20px;
 }
 
+/* new task form styling */
 .newTask {
   display: flex;
   position: absolute;
   height: 40px;
+  bottom: -27px;
   top: 100px;
   right: 20px;
   left: 0px;
   /*width: calc(100% - 40px);*/
   gap: 8px;
-  padding: 0 0.5rem;
+  margin-bottom: 20px;
+  flex-direction: column;
+  /*padding: 0 0.5rem;
   /*align-items: center;*/
 }
 
 .newTask input {
+  flex: 1;
   height: 100%;
-  /*flex: 1;*/
   color: #ffffff;
   background: #262626;
   border: 1px solid #0D0D0D;
@@ -60,7 +81,7 @@ body {
 
 .newTask button {
   height: 40px;
-  padding: 0 16px;
+  padding: 8px 16px;
   background: #c69a6e;
   color: #fff;
   border: none;
@@ -71,92 +92,51 @@ body {
   font-size: 14px;
 }
 
-/* Task styles */
-.tasks {
-  /*margin-top: 20px; /* Space between the header and task list */
-  padding: 10px; /* Padding for the tasks container */
-  /*width: 100%; /* Full width */
-  color: black;
-  /*background: #262626; /* Task background */
-  /*border: 1px solid #333333; /* Border color */
-  /*padding: 16px; /* Padding inside task */
-  /*border-radius: 8px; /* Rounded corners */
-  display: flex; /* Flexbox for task layout */
-  /*align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Space between items */
-  /*gap: 12px; /* Space between items */
-}
-
-.tasks p {
-  font-size: 14px; /* Font size for task text */
-  line-height: 15px; /* Line height */
-  /*margin-right: auto; /* Margin to push text left */
-  color: rgb(69, 121, 69);
-}
-
-.textCompleted {
-  color: #808080; /* Color for completed tasks */
-  text-decoration: line-through; /* Strike-through for completed */
-}
-
-.checkContainer {
-  width: 18px; /* Check container size */
-  height: 18px; /* Check container size */
-  background: none; /* No background */
-  border: none; /* No border */
-}
-
-.checkContainer div {
-  width: 100%; /* Full width for the check */
-  height: 100%; /* Full height for the check */
-  border-radius: 999px; /* Fully rounded */
-  border: 2px solid #4EA8DE; /* Border color */
-}
-
-.checkContainer svg {
-  width: 100%; /* Full width for SVG */
-  height: 100%; /* Full height for SVG */
-  color: #5E60CE; /* SVG color */
-}
-
-.deleteButton {
-  background: none; /* No background */
-  border: none; /* No border */
-  color: #808080; /* Button text color */
-}
-
-.taskslist {
-  width: 100%;
-  max-width: 736px;
-  margin: 0 auto;
-  margin-top: 90px;
-  padding: 0 1rem;
-}
-
-.taskslist header {
+.tasksheader {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
 }
 
-.taskslist header > div {
+/* tasks container styling */
+.tasks {
+  width: 100%;
+  max-width: 736px;
+  margin: 0 auto;
+  margin-top: 200px;
+  /* Space between the header and task list */
+  padding: 0 1rem;
+  /* Padding for the tasks container */
+  /*width: 100%; /* Full width 
+  color: black;
+  /*background: #262626; /* Task background */
+  /*border: 1px solid #333333; /* Border color */
+  /*padding: 16px; /* Padding inside task */
+  /*border-radius: 8px; /* Rounded corners 
+  display: flex; /* Flexbox for task layout */
+  /*align-items: center; /* Center items vertically 
+  justify-content: space-between; /* Space between items 
+  gap: 12px; /* Space between items */
+}
+
+.tasks header > div {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.taskslist header p2 {
-  color: #4EA8DE;
+.tasks p {
   font-size: 14px;
+  /* Font size for task text */
+  line-height: 15px;
+  /* Line height */
+  /*margin-right: auto; /* Margin to push text left */
+  color: rgb(69, 121, 69);
   font-weight: 700;
 }
 
-.textPurple {
-  color: #8284FA !important;
-}
-
-.taskslist header span {
+.tasks span {
   background: #333333;
   color: #D9D9D9;
   padding: 3px 9px;
@@ -165,7 +145,7 @@ body {
   font-weight: 700;
 }
 
-.list {
+.taskslist {
   display: flex;
   flex-direction: column;
   gap: 12px;
