@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './styles/App.css'
 //importing function from components
 import TodoList from './components/productivity/todolist.jsx'
-
 function App() {
   // if many - then use parenthesis
   return (
